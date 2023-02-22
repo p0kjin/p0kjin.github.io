@@ -1,1 +1,26 @@
-Hellow World
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+let value = localStorage.getItem("testKey")
+let hadValue = false;
+if (value != null) {
+    hadValue = true;
+} else {
+    value = "AXDDEFSA-DNVA11";
+    localStorage.setItem("testKey", value)
+}
+window.onload = function() {
+   document.getElementById("parag-1").innerHTML = hadValue;
+   document.getElementById("parag-2").innerHTML = value;
+} 
+
+</script>
+</head>
+<body>
+    <div>
+        <p id="parag-1"></p>
+        <p id="parag-2"></p>
+    </div>
+</body>
+</html>
