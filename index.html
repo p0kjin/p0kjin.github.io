@@ -2,17 +2,23 @@
 <html>
 <head>
 <script>
-
-for (const key in window) {
-    if(/^on/.test(key)) {
-        const eventType = key.substr(2);
-        if (eventType.startsWith('mouse') || eventType === 'scroll' || eventType.startsWith('pointer')) {
-            continue;
-        }
-        window.addEventListener(eventType, (event) => {
-            document.getElementById("parag-1").innerHTML += '<br/>' + event.type
-        });
-    }
+let value = localStorage.getItem("testKey")
+let hadValue = false;
+if (value != null) {
+    hadValue = true;
+} else {
+    value = "AXDDEFSA-DNVA11";
+    localStorage.setItem("testKey", value)
+}
+window.onload = function() {
+   document.getElementById("parag-1").innerHTML = hadValue;
+   document.getElementById("parag-2").innerHTML = value;
+} 
+function myFunction() {
+    window.open("https://apps.apple.com/app/amazon-kids/id1324809509?pt=17789&ct=AK_Mobile_Upsell_Baker_Settings_Headless&mt=8&cp=AK_Mobile_Upsell_Baker_Settings_Headless&tag=amzn1.account.AE6TYOPTRQEJ5XIFN4AMRQJRT4TA", '_blank').focus();
+}
+function myFunction2() {
+    window.open("itms-apps://apps.apple.com/app/amazon-kids/id1324809509?pt=17789&ct=AK_Mobile_Upsell_Baker_Settings_Headless&mt=8&cp=AK_Mobile_Upsell_Baker_Settings_Headless&tag=amzn1.account.AE6TYOPTRQEJ5XIFN4AMRQJRT4TA", '_blank').focus();
 }
 
 </script>
