@@ -2,18 +2,6 @@
 <html>
 <head>
 <script>
-let value = localStorage.getItem("testKey")
-let hadValue = false;
-if (value != null) {
-    hadValue = true;
-} else {
-    value = "AXDDEFSA-DNVA11";
-    localStorage.setItem("testKey", value)
-}
-window.onload = function() {
-   document.getElementById("parag-1").innerHTML = hadValue;
-   document.getElementById("parag-2").innerHTML = value;
-} 
 function myFunction() {
     window.open("https://apps.apple.com/app/amazon-kids/id1324809509?pt=17789&ct=AK_Mobile_Upsell_Baker_Settings_Headless&mt=8&cp=AK_Mobile_Upsell_Baker_Settings_Headless&tag=amzn1.account.AE6TYOPTRQEJ5XIFN4AMRQJRT4TA", '_blank').focus();
 }
